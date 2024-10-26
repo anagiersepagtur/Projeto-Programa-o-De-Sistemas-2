@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portal-receitas": {
+    "site-receitas": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/portal-receitas",
+            "outputPath": "dist/site-receitas",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "portal-receitas:build:production"
+              "buildTarget": "site-receitas:build:production"
             },
             "development": {
-              "buildTarget": "portal-receitas:build:development"
+              "buildTarget": "site-receitas:build:development"
             }
           },
           "defaultConfiguration": "development"
