@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './app.component';
-import { LoginModule } from './login/login.module'; // Importando o módulo de login
 import { AppRoutingModule } from './app.routes';
-import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginModule } from './login/login.module';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
@@ -11,9 +11,9 @@ import { CommonModule } from '@angular/common';
   ],
   imports: [
     BrowserModule,
-    LoginModule,
     AppRoutingModule,
-    CommonModule 
+    ReactiveFormsModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
