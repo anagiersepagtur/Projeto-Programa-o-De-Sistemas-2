@@ -54,7 +54,7 @@ export class HomeComponent {
     },
     {
       titulo: 'Receita 9',
-      descricao: 'Descrição da Receita 9.',
+      descricao: 'Descrição da Receita 9',
       imagemUrl: 'https://example.com/imagem9.jpg'
     }
   ];

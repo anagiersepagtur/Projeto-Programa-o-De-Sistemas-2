@@ -1,5 +1,5 @@
 <div class="container-xxl d-flex justify-content-center align-items-center" style="height: 100vh;">
-    <div class="card bg-white" style="margin-top: 2rem; align-items: center;">
+    <div class="card bg-white" style="margin-top: 2rem; align-items: center; width: 100%; max-width: 500px;">
       <div class="card-body" style="padding: 8vh;">
         <h2>Login</h2>
         <form [formGroup]="frm" (ngSubmit)="login()" *ngIf="!userNotFound">
@@ -29,7 +29,7 @@
               <div class="row" style="justify-content: center;">
                 <div *ngIf="contValidaUser > 0" style="color: red;">Usuário ou senha incorretos, tente novamente!</div>
                 <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 2rem; width:45%; margin-right: 2px;">Logar</button>
-                <button class="btn btn-primary btn-lg" style="margin-top: 2rem; width:45%; margin-left: 2px;">Criar Conta</button>
+                <button class="btn btn-primary btn-lg" style="margin-top: 2rem; width:45%; margin-left: 2px;" (click)="criarUser()">Criar Conta</button>
               </div>
             </div>
           </div>
@@ -41,7 +41,7 @@
         </div>
   
         <div class="text-center" style="margin-top: 2rem;">
-          <button type="button" class="btn btn-outline-dark btn-sm">Entrar sem Login</button>
+          <button type="button" class="btn btn-outline-dark btn-sm" (click)="home()">Entrar sem Login</button>
         </div>
       </div>
     </div>

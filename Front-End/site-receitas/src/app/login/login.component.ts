@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common'; 
 import { ReactiveFormsModule } from '@angular/forms'; 
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -16,7 +18,7 @@ export class LoginComponent implements OnInit {
   firstLogin: boolean = false;
   contValidaUser = 0;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.frm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -45,4 +47,12 @@ export class LoginComponent implements OnInit {
     this.contValidaUser = 0;
     this.frm.reset();
   }
+
+  home(): void{
+    this.router.navigate(['/home']);
+    }
+
+  criarUser(): void{
+    this.router.navigate(['/criarUser']);
+    }
 }
